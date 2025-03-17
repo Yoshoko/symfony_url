@@ -19,8 +19,7 @@ final class AuthController extends AbstractController
         #[MapRequestPayload]
         CreateUserDTO $payload,
         AuthService $authService,
-    ): JsonResponse
-    {
+    ): JsonResponse {
         $user = $authService->registerUser($payload);
         return $this->json(
             $user,

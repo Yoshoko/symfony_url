@@ -33,15 +33,15 @@ final class ShortLinkController extends AbstractController
     ): Response {
         $shortLink = $shortLinkService->updateShortLink($shortLink, $dto);
         return $this->json($shortLink);
-        /*$shortLink->setShortCode($dto->shortCode);
+        $shortLink->setShortCode($dto->shortCode);
         $shortLink->setUrl($dto->url);
         $shortLink->setMaxVisits($dto->maxVisits);
         $shortLink->setValidOn($dto->validOn);
         $shortLink->setExpiresAt($dto->expiresAt);
         $shortLink->setTags($dto->tags);
-    
+
         $entityManager->flush();
-    
-        return $this->json($shortLink);*/
+
+        return $this->json($shortLink);
     }
 }
